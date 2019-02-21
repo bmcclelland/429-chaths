@@ -13,10 +13,16 @@ executable chaths
     default-language:   Haskell2010
     default-extensions:
         LambdaCase
-        RecordWildCards
+        NamedFieldPuns
         RankNTypes
         TupleSections
         ScopedTypeVariables
+        OverloadedStrings
     build-depends:       
         base >= 4.7 && < 5
+      , safe-exceptions
+      , network >= 2.7
+      , bytestring
     other-modules:
+        Server
+        Client
